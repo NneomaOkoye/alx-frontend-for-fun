@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box.box1,
+  .box.box5 {
+    height: 150px;
+    background-color: #FF6B6B;
+    font-size: small;
+    color: #fff;
+  }
+  
+  .box.box2,
+  .box.box4 {
+    height: 200px;
+    background-color: #54A0FF;
+    font-size: large;
+    color: #fff;
+  }
+  
+  .box.box3 {
+    height: 250px;
+    background-color: #47B881;
+    font-size: 45px;
+    color: #fff;
+  }
+  
+  .box:nth-child(4) {
+    background-color: #FCD34D;
+  }
+  
+  .box:nth-child(5) {
+    background-color: #A504B6;
+  }
