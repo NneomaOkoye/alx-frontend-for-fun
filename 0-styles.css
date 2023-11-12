@@ -1,0 +1,28 @@
+
+.icon {
+  width: 65%;
+  height: 360px;
+  display: inline-block;
+  background-image: url('0-sprite.png');
+  background-repeat: no-repeat;
+}
+
+.i-html {
+  background-position: 0 0;
+}
+.i-css {
+  background-position: -300px 0;
+}
+
+.i-js {
+  background-position: -600px 0;
+}
+
+ul li {
+  list-style-type: none;
+  border: 1px solid rgb(82, 80, 80);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

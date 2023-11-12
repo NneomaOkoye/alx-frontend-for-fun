@@ -1,0 +1,41 @@
+h2 a {
+  color: #d73953;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+/* Create the moving underline effect using a pseudo-element */
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0; /* Initial width is zero */
+  height: 3px;
+  background-color: #d73953;
+  transition: width 0.3s ease; /* Add a smooth transition to the width */
+}
+
+a:hover::after {
+  width: 100%; /* Expand the width to 100% */
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Position the underline below the text */
+  left: 100%; /* Initial position is at the right end */
+  width: 0; /* Initial width is zero */
+  background-color: #d73953;
+  transition: left 0.3s ease, width 0.3s ease; /* Add transitions for left and width */
+  visibility: hidden; /* Initially hidden */
+}
+
+a:hover::before {
+  left: 0; /* Move the underline to the left */
+  width: 100%; /* Expand the width to 100% */
+  visibility: visible; /* Show the underline */
+}

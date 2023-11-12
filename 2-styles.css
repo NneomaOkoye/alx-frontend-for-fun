@@ -1,0 +1,88 @@
+/* 2-styles.css */
+
+/* Reset default styles
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+} */
+
+/* Style for the custom toggle */
+.toggle {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 30px;
+}
+
+.toggle-cb {
+  display: none; /* Hide the actual checkbox */
+}
+
+.toggle-label {
+  display: block;
+  width: 80px;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.toggle-inner {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: white;
+  transition: transform 0.2s ease, left 0.2s ease; /* Add left transition */
+  z-index: 2; /* Place content above the switch */
+}
+
+.toggle-switch {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid #ccc;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: left 0.2s ease, background-color 0.2s ease;
+  z-index: 1; /* Place switch below the content */
+}
+
+/* Slide the switch and change background when the checkbox is checked */
+.toggle-cb:checked + .toggle-label .toggle-switch {
+  left: calc(100% - 29px);
+}
+
+.toggle-cb:checked + .toggle-label {
+  background-color: #d73953;
+}
+
+/* Style for the text inside the toggle */
+.toggle-label::before {
+  content: 'No'; /* Default text */
+  display: inline-block;
+  position: absolute;
+  font-size: 1.2rem;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  z-index: 2; /* Place content above the switch */
+}
+
+/* Update text when the checkbox is checked */
+.toggle-cb:checked + .toggle-label::before {
+  content: 'Yes';
+  color: white;
+  left: 5px; /* Position to the left when "Yes" */
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
